@@ -2,12 +2,12 @@ import React, { useContext, createContext } from 'react';
 
 import { useAddress, useContract, useMetamask, useContractWrite } from '@thirdweb-dev/react';
 import { ethers } from 'ethers';
-import { EditionMetadataWithOwnerOutputSchema } from '@thirdweb-dev/sdk';
+// import { EditionMetadataWithOwnerOutputSchema } from '@thirdweb-dev/sdk';
 
-const StateContext = createContext();
+const StateContext = createContext();   
 
 export const StateContextProvider = ({ children }) => {
-  const { contract } = useContract('0x7b1204E013053ABB1c425056426a748f14387C55');
+  const { contract } = useContract('0xf52b4Fb6BA4bC0E1bD49106F0DD49f711A887490');
   const { mutateAsync: createCampaign } = useContractWrite(contract, 'createCampaign');
 
   const address = useAddress();
